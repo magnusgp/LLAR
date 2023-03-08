@@ -1,0 +1,12 @@
+{ "FRAME_SIZE": 512, 
+"HOP_LENGTH": 2048, 
+"DURATION": 5, 
+"SAMPLE_RATE": 16000,
+"MONO": true, 
+"LEARNING_RATE": 0.0005, 
+"BATCH_SIZE": 64, 
+"EPOCHS": 15, 
+"SPECTROGRAMS_PATH": "autoencoder/fsdd/spectograms", 
+"SPECTROGRAMS_SAVE_DIR": "autoencoder/fsdd/spectograms", 
+"MIN_MAX_VALUES_SAVE_DIR": "autoencoder/fsdd", 
+"FILES_DIR": "data/ECS50"}
