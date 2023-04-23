@@ -7,23 +7,11 @@ Project Organization
 ------------
 
     ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
+    ├── Makefile           <- Makefile for initializing the project
     ├── README.md          <- The top-level README for developers using this project.
     ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+    │   └── ESC50          <- Data folder. If you use this repository for replication of results, 
+    │                        download the ESC-50 dataset and paste it here
     │
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
     │   └── figures        <- Generated graphics and figures to be used in reporting
@@ -32,22 +20,44 @@ Project Organization
     │                         generated with `pip freeze > requirements.txt`
     │
     ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
+    │
+    ├── autoencoder        <- Source code and relevant folders for the variational autoencoder used in the project.
     │   ├── __init__.py    <- Makes src a Python module
     │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
+    │   ├── fsdd           <- Folder containing preprocessed data
+    │   │   └── pixel_values.png <- Pixel value likelihood distribution
     │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
+    │   ├── logs         <- Model checkpoints and training logs
     │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
+    │   ├── wandb        <- Wandb.ai logfiles used for tracking model training
+    │   │
+    │   ├── runs         <- Saving folder for model weigths
     │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
+    │   ├── output       <- Visualizations and comparisons
+    │   │
+    │   └── source files  <- source files
+    │
+    ├── yamnet             <- Source code and relevant folders for using YAMNet in this project.
+    │   ├── __init__.py    <- Makes src a Python module
+    │   │
+    │   ├── data           <- Folder containing data
+    │   │
+    │   ├── logs         <- Model checkpoints and training logs
+    │   │
+    │   ├── wandb        <- Wandb.ai logfiles used for tracking model training
+    │   │
+    │   ├── runs         <- Saving folder for model weigths
+    │   │
+    │   ├── output       <- Visualizations and comparisons
+    │   │
+    │   └── source files  <- source files
+    │   │
+    ├── information_retrieval  <- Source code for IR scoring and comparison.
+    │   ├── __init__.py    <- Makes src a Python module
+    │   │
+    │   ├── comparison_mcnemar.py <- Source file for McNemar test
+    │   │
+    │   └── information_retrieval.py  <- Source file for all IR scoring
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 
