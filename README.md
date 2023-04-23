@@ -1,7 +1,67 @@
-LLAR
+# LLAR
 ==============================
 
-Learning audio representations for search and retrieval using
+### Learning Latent Audio Representations for search and retrieval using supervised and unsupervised learning methods
+
+==============================
+
+#### This repository was prepared as a part of the Bachelor thesis project at the Technical University of Denmark for the study program Artificial Intelligence and Data Science.
+
+==============================
+
+In order to use this repository for recreation of results, first download the publicly Environmental Sound Classification 50 (ESC-50) dataset here: <https://github.com/karolpiczak/ESC-50>
+
+Then, clone the repository and paste the dataset into the 'data/ESC50'-folder or choose your own structure.
+
+```
+git clone https://github.com/magnusgp/LLAR.git
+```
+
+Make sure that you are logged into wandb.ai, otherwise you will get an error when logging model progress and visualizations.
+However, this logging can be removed manually from the code if it is not desired.
+
+==============================
+
+Run the Makefile to setup the environment or use your own. The dependencies are listed in requirements.txt
+
+Depending on the model you want to use, cd into either "autoencoder" or "yamnet". Please note that these are only short start-up guides and does not cover the entire codebase. You are more than welcome to explore the scripts and I will update this page soon.
+
+==============================
+
+## Autoencoder
+
+```
+cd autoencoder
+```
+Configure the training of the model in the config_new.json file. Then, run the training script.
+Please be aware of the hyperparameters set and that we are runnung a 5-fold CV where the weights are saved for each run.
+
+```
+python3 -m train_new.py
+```
+After model training, explore the embeddings generated and do similarity-based search and retrieval!
+
+You can also load a pretrained model to do so (just change the run directory in the script load_model.py):
+```
+python3 -m load_model.py
+```
+
+==============================
+
+## YAMNet
+
+```
+cd autoencoder
+```
+Generate the embeddings using the pretrained YAMNet model:
+```
+python3 -m embeddings.py
+```
+Then, do similarity-based search and retrieval:
+```
+python3 -m comparisons.py
+```
+==============================
 
 Project Organization
 ------------
