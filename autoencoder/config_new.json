@@ -1,0 +1,8 @@
+{"run_name": "run_debug",
+"learning_rate": 0.0005, 
+"batch_size": 32, 
+"epochs": 100, 
+"spectrograms_path": "autoencoder/fsdd/spectograms_big",
+"beta_warmup": "False", 
+"latent_space_dim": 128,
+"comments": "removed beta-warmup"}

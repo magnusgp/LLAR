@@ -1,0 +1,9 @@
+numpy
+tensorflow
+keras
+matplotlib
+datetime
+sklearn
+tqdm
+tabulate
+librosa
